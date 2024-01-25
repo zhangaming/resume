@@ -1,0 +1,41 @@
+@keyframes ripple {
+  0% {
+    opacity: 0.3; }
+  40% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px 10px #14A6EC, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    opacity: .5; }
+  100% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px 10px #14A6EC, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: scale(1.5); } }
+@keyframes typing {
+  from {
+    width: 0; } }
+@keyframes cursor {
+  50% {
+    border-color: transparent; } }
+@keyframes music {
+  100% {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+    box-shadow: 0 0 25px #fff,0 0 15px #158CCC;
+    transform: rotate(360deg); } }
+@keyframes icon-rotate {
+  100% {
+    transform: rotate(360deg); } }
+@keyframes loader-1-outter {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes loader-1-inner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+
+/*# sourceMappingURL=my-animate.css.map */

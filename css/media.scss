@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+//在1200px下
+@media (max-width: 1200px) {
+
+  // 关于我
+  .about-me {
+    .say {
+      width: 100%;
+      height: auto;
+      margin: 30px auto;
+      padding: 10px;
+      border: 3px dashed #393C3E;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//在992px下
+@media (max-width: 992px) {
+
+  // 作品展示
+  .demo {
+    .flex-wrap {
+      .flex-item {
+        width: 24%;
+        margin: 0 .5% 10px;
+      }
+    }
+  }
+}
+
+//在768px下
+@media (max-width: 768px) {
+  .show-box {
+    width: 90%;
+
+    h1 {
+      font-size: 32px;
+      font-family: hyllh;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  //导航栏
+  .nav {
+    min-width: 320px;
+
+    .navmove {
+      display: none;
+    }
+
+    .menu-btn {
+      display: block;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      background: rgba(#393C3E, .8);
+
+      li {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px dashed #fff;
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          transition: all 1s;
+        }
+
+        &:nth-of-type(odd) {
+          &:before {
+            background-color: rgba(#158CCC, .3);
+          }
+        }
+
+        &:nth-of-type(even) {
+          &:before {
+            background-color: rgba(#fff, .3);
+          }
+        }
+
+        &:hover {
+          &:before {
+            height: 100%;
+          }
+        }
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+
+        span {
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  //通用头部
+  .headline {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  //关于我
+  .about-me {
+    padding-bottom: 30px;
+
+    .flex-wrap {
+      .flex-item {
+        width: 50%;
+        margin-bottom: 10px;
+
+        .info {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .say {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // 技能
+  .skill {
+    padding-bottom: 30px;
+
+    .flex-wrap {
+      .flex-item {
+        width: 48%;
+        margin: 0 1% 10px;
+
+        .front-rotate {
+          transform: rotateY(-180deg);
+        }
+
+        .back-rotate {
+          transform: rotateY(0);
+        }
+      }
+    }
+  }
+
+  //作品展示
+  .demo {
+    .flex-wrap {
+      padding-bottom: 30px;
+
+      .flex-item {
+        width: 48%;
+        margin: 0 1% 10px;
+      }
+    }
+
+    .more {
+      margin-top: 5vh;
+    }
+  }
+
+  //我的经历
+  .experience {
+    .timeline {
+      &:before {
+        right: auto;
+      }
+
+      li {
+        &:nth-of-type(odd) {
+          .timeline-content {
+            text-align: left;
+
+            &:before {
+              left: -20px;
+              border-right-color: #393C3E;
+              border-left-color: transparent;
+            }
+          }
+        }
+
+        &:nth-of-type(even) {
+          .timeline-content {
+            float: left;
+          }
+        }
+
+        .timeline-dots {
+          left: 0;
+        }
+
+        .timeline-content {
+          width: 90%;
+          margin-left: 40px;
+
+          .title {
+            line-height: 20px;
+            font-weight: bold;
+            font-size: 14px;
+          }
+
+          .post {
+            font-size: 12px;
+          }
+
+          .desc {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  // 联系方式
+  .contact {
+    .contact-box {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      .cont-row {
+        width: 290px;
+        margin: 0 auto;
+      }
+
+      .passages {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .list {
+        li {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+
+          i {
+            font-size: 18px;
+          }
+
+          a {
+            width: 40px;
+            height: 40px;
+          }
+
+          .tips {
+            top: -50px;
+            left: -20px;
+          }
+        }
+      }
+    }
+
+  }
+
+  //我的经历
+  .message-board {
+    .content {
+      .timeline {
+        &:before {
+          right: auto;
+        }
+
+        li {
+          &:nth-of-type(odd) {
+            .timeline-content {
+              text-align: left;
+
+              &:before {
+                left: -20px;
+                border-right-color: #393C3E;
+                border-left-color: transparent;
+              }
+            }
+          }
+
+          &:nth-of-type(even) {
+            .timeline-content {
+              float: left;
+            }
+          }
+
+          .timeline-dots {
+            left: 0;
+          }
+
+          .timeline-content {
+            width: 90%;
+            margin-left: 40px;
+
+            .title {
+              line-height: 20px;
+              font-weight: bold;
+              font-size: 14px;
+            }
+
+            .post {
+              font-size: 12px;
+            }
+
+            .desc {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 页脚
+  footer {
+    p {
+      font-size: 12px;
+
+      a {
+        display: none;
+      }
+    }
+  }
+}
+
+//除768px外
+@media (min-width: 768px) {
+
+  //前端技能
+  .skill {
+    .flex-wrap {
+      .flex-item {
+        &:hover {
+          .front {
+            transform: rotateY(-180deg);
+          }
+
+          .back {
+            transform: rotateY(0);
+          }
+        }
+      }
+    }
+  }
+}
