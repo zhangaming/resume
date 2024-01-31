@@ -134,6 +134,15 @@ function play() {
   $(".logo").css("animation", "music 5s infinite linear");
 }
 // 左键点击动画
+function co(){
+  var colorElements = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
+    var colorArray = colorElements.split(",");
+    var color ="#";
+    for(var i =0;i<6;i++){
+    color+=colorArray[Math.floor(Math.random()*16)];
+    }
+    return color;
+};
 $(function () {
   var a_idx = 0;
   jQuery(document).ready(function ($) {
@@ -142,7 +151,22 @@ $(function () {
       play();
     });
     $("body").click(function (e) {
-      var font = ["F", "A", "N", "G", "J", "I", "E", "S", "O", "N", "G"];
+      var font = [
+        "故",
+        "事",
+        "的",
+        "小",
+        "黄",
+        "花",
+        "从",
+        "出",
+        "生",
+        "那",
+        "年",
+        "就",
+        "飘",
+        "着",
+      ];
       var $i = $("<span/>").text(font[a_idx]); //新建span标签
       a_idx = (a_idx + 1) % font.length;
       var x = e.pageX,
@@ -152,7 +176,7 @@ $(function () {
         top: y - 20,
         left: x,
         position: "absolute",
-        color: "#12A3EA",
+        "color": co(),
         "font-weight": "700",
         "font-family": "hyllh",
       }); //给生成的span标签加上 样式
@@ -195,7 +219,7 @@ $(window).load(function () {
       play();
     }
   }, 5000);
-  getmessage();
+  // getmessage();
 });
 
 // // 自定义右键菜单
@@ -271,7 +295,7 @@ $(window).load(function () {
 var pageNum = 1;
 
 function commitmessage() {
-  alert('功能已屏蔽')
+  alert("功能已屏蔽");
   // var user = $("#user").val();
   // var message = $("#message").val();
   // var url = "http://182.61.48.129/api/submitMessage";
